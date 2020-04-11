@@ -1,0 +1,18 @@
+ Resources:
+  InstanceTypeParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/instancetype
+      Type: String
+      Value: t2.micro
+      Description: SSM Parameter for ec2 instance type.
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
+
+  LnxAMIId:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/AMIId
+      Type: String
+      Value:
+      Description: AMI ID for Linux.
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
