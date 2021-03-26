@@ -1,0 +1,43 @@
+ Resources:
+  mybsSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !Ref VpcId
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 22
+        IpProtocol: tcp
+        ToPort: 22
+
+  InstanceTypeParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/instancetype
+      Type: String
+      Value: t2.micro
+      Description: SSM Parameter for ec2 instance type.
+
+  LnxAMIId:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/AMIId
+      Type: String
+      Value: myID
+      Description: AMI ID for Linux.
+
+  VPCId:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/VPCId
+      Type: String
+      Value: myID
+      Description: VPC ID .
+
+  VPCId:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /apps/mybs/mybsSecurityGroup
+      Type: String
+      Value: !Ref mybsSG
+      Description: Security group for BS .
