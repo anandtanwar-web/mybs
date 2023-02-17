@@ -1,12 +1,20 @@
-import getopt
-import sys
+def missing_char(str, n):
+  length=len(str)
+  print(length)
+  strs=''
+  for l in range(length):
+    if l==n:
+       continue
+    else:
+       strs=strs+str[l]
+    l=l+1
+  return strs
 
-argv = sys.argv[1:]
-try:
-    opts, args = getopt.getopt(argv, 'hm:d', ['help', 'my_file='])
-    print(opts)
-    print(args)
-except getopt.GetoptError:
-    #Print a message or do something useful
-    print('Something went wrong!')
-    sys.exit(2)
+def mis_char(str, n):
+  front = str[:n]   # up to but not including n
+  back = str[n+1:]  # n+1 through end of string
+  return front + back
+
+if __name__ == '__main__':
+      result=missing_char("kittens", 1)
+      print(result)
