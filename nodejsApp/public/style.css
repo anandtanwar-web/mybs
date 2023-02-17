@@ -72,9 +72,11 @@ p {
   margin-left: 20px;
 }
 
-.feedback-evaluation img {
-  float: left;
-  margin-right: 20px;
+.feedback img {
+  width: 600px;
+  height: 400px;
+  /*float: left;
+  margin-right: 20px;*/
 }
 
 .interview-coaching img {
