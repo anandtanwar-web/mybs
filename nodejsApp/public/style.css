@@ -5,9 +5,91 @@ body {
   margin: 0;
 }
 
+form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #888888;
+        width: 50%;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      input[type="text"], input[type="email"], input[type="tel"], textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+      }
+      input[type="number"] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+	  input[type=date] {
+  font-family: Arial, sans-serif; /* Set font family */
+  font-size: 16px; /* Set font size */
+  color: #333; /* Set font color */
+  padding: 10px; /* Set padding */
+  border: 1px solid #ccc; /* Set border */
+  border-radius: 5px; /* Set border radius */
+  background-color: #fff; /* Set background color */
+  box-shadow: none; /* Remove box shadow */
+  outline: none; /* Remove outline */
+}
+
+/* Remove default date picker styling */
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Add custom icon */
+input[type=date]::before {
+  content: '\f073';
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+/* Set hover state for custom icon */
+input[type=date]:hover::before {
+  color: #666;
+}
+
+	  
+label {
+        font-weight: bold;
+        display: block;
+      }
+
 header {
-  background-color: #111;
-  color: #f2f2f2;
+  background-color: black;
+  /*color: #f2f2f2;*/
   padding: 20px;
 }
 
@@ -42,6 +124,12 @@ main {
   padding: 20px;
 }
 
+#disclaimer{
+  color:blue;
+  font-weight: bold;
+}
+
+
 h1 {
   font-size: 3rem;
   margin-top: 0;
@@ -50,6 +138,46 @@ h1 {
 p {
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+select {
+  font-family: Arial, sans-serif; /* Set font family */
+  font-size: 16px; /* Set font size */
+  color: #333; /* Set font color */
+  padding: 10px; /* Set padding */
+  border: 1px solid #ccc; /* Set border */
+  border-radius: 5px; /* Set border radius */
+  background-color: #fff; /* Set background color */
+  box-shadow: none; /* Remove box shadow */
+  outline: none; /* Remove outline */
+}
+
+/* Style the arrow icon */
+select::-ms-expand {
+  display: none;
+}
+
+select::-webkit-select-arrow {
+  display: none;
+}
+
+select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #333;
+  pointer-events: none;
+}
+
+/* Style the options */
+select option {
+  font-family: Arial, sans-serif; /* Set font family */
+  font-size: 16px; /* Set font size */
+  color: #333; /* Set font color */
+  background-color: #fff; /* Set background color */
 }
 
 .button {
@@ -67,13 +195,26 @@ p {
 
 /* Page-specific styles */
 
+/*
 .mock-interviews img {
   float: right;
   margin-left: 20px;
+}*/
+
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
-.feedback img {
-  width: 600px;
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  right: 1.6in;
+}
+
+.feedback {
+  width: 700px;
   height: 400px;
   /*float: left;
   margin-right: 20px;*/
@@ -82,4 +223,11 @@ p {
 .interview-coaching img {
   float: right;
   margin-left: 20px;
+}
+
+.logo {
+  float: left;
+  margin-left: 50%;
+  width: 100px;
+  height: 70px;
 }

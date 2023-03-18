@@ -22,8 +22,8 @@ app.get('/feedback-evaluation', (req, res) => {
   //res.sendFile(__dirname + '/public/helloworld.html');
 });
 
-app.get('/interview-coaching', (req, res) => {
-  res.sendFile(__dirname + '/public/interview-coaching.html');
+app.get('/Signup', (req, res) => {
+  res.sendFile(__dirname + '/public/Accounts.html');
   //res.render('mock-interviews.html')
   //res.sendFile(__dirname + '/public/helloworld.html');
 });

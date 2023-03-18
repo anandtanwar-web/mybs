@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/mock-interviews">Mock Interviews</a></li>
+          <li><a href="/feedback-evaluation">Feedback & Evaluation</a></li>
+          <li><a href="/Signup">Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+ <!--   <main> -->
+    <h1>Registration Form</h1>
+   <form action="/register" method="POST">
+     <label for="firstName">First Name:</label>
+     <input type="text" id="firstName" name="firstName" required><br><br>
+     <label for="lastName">Last Name:</label>
+     <input type="text" id="lastName" name="lastName" required><br><br>
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required><br><br>
+     <label for="workExperience">Work Experience:</label>
+     <input type="number" id="workExperience" name="workExperience" min="0" max="50" required><br><br>
+     <label for="skills">Skills:</label>
+     <textarea id="skills" name="skills" required></textarea><br><br>
+     <label for="phoneNumber">Phone Number:</label>
+     <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required><br><br>
+     <select id="country" name="country" required>
+       <option value="">Select a country</option>
+       <option value="USA">USA</option>
+       <option value="Canada">Canada</option>
+       <option value="UK">UK</option>
+       <option value="Australia">Australia</option>
+        <option value="India">India</option>
+       <!-- add more options here -->
+     </select><br><br>
+     <label for="interviewDate">Interview Availability:</label>
+     <input type="date" id="interviewDate" name="interviewDate" required><br><br>	 
+     <p id="disclaimer">Your Privacy is safe with us. We promise not to sell, give away, or otherwise disclose your information to anyone, unless required by and in accordance with the law. I consent to share this information with CareerExpress360</p>
+     <input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+     <label for="gdprConsent" style="display: inline-block;">I accept the Terms and Conditions</label><br><br>
+     <input type="submit" value="Register">
+   </form>
+
+   <!-- </main> -->
+  </body>
+</html>
